@@ -1,9 +1,5 @@
 package jp.ntrip.client;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Side;
@@ -12,6 +8,10 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.chart.XYChart.Series;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class RtcmMsm extends RtcmMessage {
     private static final String[] GPSSIGNALMAP = {"","","1C","1P","1W","","","","2C","2P","2W","","","","","2S","2L","2X","","","","","5I","5Q","5X","","","","","","1S","1L","1X"};
@@ -314,15 +314,15 @@ public class RtcmMsm extends RtcmMessage {
      * サブカテゴリ：シグナル名
      * @return CNRデータのObservableList
      */
-    ObservableList<XYChart.Series<Number,String>> makeCnrSeries() {
+    ObservableList<Series<Number,String>> makeCnrSeries() {
         return makeSeries(getPRNList(), getSignalStringList(), getCombinedCellList(cnrList));
     }
 
-    private ObservableList<XYChart.Series<Number,String>> makeSeries(List<String> category, List<String> subCategory, List<Integer> data) {
-        ObservableList<XYChart.Series<Number,String>> list = FXCollections.observableArrayList();
+    private ObservableList<Series<Number,String>> makeSeries(List<String> category, List<String> subCategory, List<Integer> data) {
+        ObservableList<Series<Number,String>> list = FXCollections.observableArrayList();
 
         for(int i = 0; i < subCategory.size(); i++) {
-            XYChart.Series<Number,String> series = new Series<>();
+            Series<Number,String> series = new Series<>();
             series.setName(subCategory.get(i));
             for(int j = i, cat = 0; j < data.size(); j += subCategory.size(), cat++) {
                 series.getData().add(new XYChart.Data<>(data.get(j), category.get(cat)));

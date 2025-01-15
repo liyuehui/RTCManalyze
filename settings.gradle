@@ -1,0 +1,6 @@
+rootProject.name = "RTCManalyze"
+buildscript {
+    repositories {
+        maven { url 'https://repo.nju.edu.cn/maven/' }
+    }
+}

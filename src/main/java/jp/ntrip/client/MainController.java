@@ -1,9 +1,5 @@
 package jp.ntrip.client;
 
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
-
 import javafx.application.Platform;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
@@ -12,21 +8,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainController {
     private static final String PROPERTIES_INITFILEPATH = "./ntrip.properties";

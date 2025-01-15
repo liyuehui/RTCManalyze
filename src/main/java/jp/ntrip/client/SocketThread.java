@@ -1,5 +1,10 @@
 package jp.ntrip.client;
 
+import javafx.application.Platform;
+import javafx.concurrent.Service;
+import javafx.concurrent.Task;
+import javafx.scene.text.Text;
+
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,10 +14,6 @@ import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import javafx.application.Platform;
-import javafx.concurrent.Service;
-import javafx.concurrent.Task;
-import javafx.scene.text.Text;
 
 public class SocketThread extends Service<Boolean> {
     private FxField fxField;

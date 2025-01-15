@@ -1,10 +1,11 @@
 package jp.ntrip.client;
 
-import java.util.HashMap;
-import java.util.Map;
 import javafx.application.Platform;
 import javafx.scene.chart.BarChart;
 import javafx.scene.text.Text;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class DecodeRTCM3 {
     private static final int BUFFERLENGTH = 4096;

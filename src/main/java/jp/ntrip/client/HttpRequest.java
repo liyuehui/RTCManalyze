@@ -1,11 +1,12 @@
 package jp.ntrip.client;
 
+import javafx.application.Platform;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Base64;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import javafx.application.Platform;
 
 
 public class HttpRequest {
